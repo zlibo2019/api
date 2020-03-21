@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weds.api.mapper.kq.AttendanceMapper">
+
+    <select id="select" resultType="com.weds.api.entity.kq.AttendanceFlowEntity">
+        select a.user_serial userSerial,b.user_no userNo,b.user_lname userLname,a.sj,a.fx
+        from kt_jl a
+        left join dt_user b on a.user_serial = b.user_serial
+    </select>
+
+</mapper>
